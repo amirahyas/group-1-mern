@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Max",
+      "breed": "Labrador Retriever",
+      "age": 5
+    },
+    {
+      "name": "Bella",
+      "breed": "German Shepherd",
+      "age": 3
+    },
+    {
+      "name": "Charlie",
+      "breed": "Golden Retriever",
+      "age": 4
+    },
+    {
+      "name": "Lucy",
+      "breed": "Siberian Husky",
+      "age": 6
+    },
+    {
+      "name": "Daisy",
+      "breed": "Poodle",
+      "age": 7
+    },
+    {
+      "name": "Rocky",
+      "breed": "Boxer",
+      "age": 4
+    },
+    {
+      "name": "Molly",
+      "breed": "Beagle",
+      "age": 2
+    },
+    {
+      "name": "Bailey",
+      "breed": "Shih Tzu",
+      "age": 3
+    },
+    {
+      "name": "Cooper",
+      "breed": "Dachshund",
+      "age": 5
+    },
+    {
+      "name": "Sadie",
+      "breed": "French Bulldog",
+      "age": 2
+    }
+  ]

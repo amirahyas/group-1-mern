@@ -6,12 +6,28 @@ type User {
     password: String!
 }
 
+type Pet {
+    name: String!
+    breed: String!
+    age: Int!
+}
+
+type Auth {
+    token: ID!
+    user: User
+  }
+
+
+
 type Query {
     users: [User]
+    getUserByUsername(username: String!): User
+    pets: [Pet]!
 }
 
 type Mutation {
-    addUser(username: String!, email: String!, password: String!): User
+    registerUser(username: String!, email: String!, password: String!): Auth
+    loginUser(email: String!, password: String!): Auth
   }
 `;
 
