@@ -2,7 +2,8 @@
     {
       "name": "Max",
       "breed": "Labrador Retriever",
-      "age": 5
+      "age": 5,
+      "image": "https://www.dogster.com/wp-content/uploads/2024/01/Labrador-Retriever-dog-standing-on-the-lawn_Radomir-Rezny_Shutterstock.jpg"
     },
     {
       "name": "Bella",
