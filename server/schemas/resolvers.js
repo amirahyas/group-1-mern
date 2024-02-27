@@ -24,31 +24,29 @@ const resolvers = {
   },
   Mutation: {
     // register a new user
-    registerUser: async (_, { username, email, password }) => {
-      try {
-        const user = await User.create({ username, email, password });
-        const token = signToken(user);
-        return { user, token };
-      } catch (error) {
-        throw new Error("Failed to register user");
-      }
+    registerUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
+
+      return { token, user };
     },
     // login a user
-    loginUser: async (_, { email, password }) => {
-      try {
-        const user = await User.findOne({ email });
-        if (!user) {
-          throw new AuthenticationError("User not found");
-        }
-        const correctPassword = await user.isCorrectPassword(password);
-        if (!correctPassword) {
-          throw new AuthenticationError("Incorrect password");
-        }
-        const token = signToken(user);
-        return { user, token };
-      } catch (error) {
-        throw new Error("Failed to login user");
+    loginUser: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw AuthenticationError;
       }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw AuthenticationError;
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
     },
   },
 };

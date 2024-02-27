@@ -3,17 +3,17 @@ type User {
     _id: ID
     username: String!
     email: String!
-    password: String!
 }
 
 type Pet {
     name: String!
     breed: String!
     age: Int!
+    image: String
 }
 
 type Auth {
-    token: ID!
+    token: ID
     user: User
   }
 
