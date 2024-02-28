@@ -4,9 +4,11 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../../utils/mutations';
 import Auth from '../../utils/auth';
-import './login.css'; // Link to the CSS file
-import './home.css';
-import './signup.css';
+import './src/components/css/login.css'; // Link to the CSS file
+import './src/components/css/home.css';
+import './src/components/css/signup.css';
+
+
 
 export default Login;
 
