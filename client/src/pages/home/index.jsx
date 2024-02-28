@@ -2,7 +2,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_PETS } from "../../utils/queries";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-
+import "../../components/css/home.css"
 const Home = () => {
   const { loading, error, data } = useQuery(QUERY_PETS);
   console.log(data);
