@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,8 +11,14 @@ export default defineConfig({
       '/graphql': {
         target: 'http://localhost:3001',
         secure: false,
-        changeOrigin: true
-      }
-    }
+        changeOrigin: true,
+      },
+    },
   },
-})
+  css: {
+    modules: false, // Set to true if you want to enable CSS modules
+    preprocessorOptions: {
+      // Additional CSS preprocessor options if needed
+    },
+  },
+});

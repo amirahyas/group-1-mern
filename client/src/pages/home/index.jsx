@@ -8,9 +8,7 @@ const Home = () => {
   console.log(data);
   const pets = data?.pets || [];
   console.log(error);
-  // console.log(pets);
-  // console.log(data);
-  // console.log(pets);
+ 
 
   function showNavigation() {
     if (Auth.loggedIn()) {
