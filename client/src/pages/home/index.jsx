@@ -4,7 +4,7 @@ import { ADD_FAVORITES } from "../../utils/mutations";
 import {useEffect} from 'react';
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-
+import "../../components/css/home.css"
 const Home = () => {
   
   const { loading, error, data, refetch } = useQuery(QUERY_PETS, {
@@ -17,6 +17,7 @@ const Home = () => {
   console.log(mutationError);
   const pets = data?.pets || [];
   console.log(error);
+
   
   async function handleFavorite(e) {
     const petId = e.target.dataset.id
@@ -29,6 +30,9 @@ const Home = () => {
     console.log(data);
     // window.location.reload();
   }
+
+ 
+
 
   function showNavigation() {
     if (Auth.loggedIn()) {

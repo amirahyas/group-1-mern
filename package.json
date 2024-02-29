@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "postcss-modules": "^6.0.0"
   },
   "dependencies": {
     "apollo-server-express": "^3.13.0"
