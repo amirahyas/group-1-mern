@@ -66,22 +66,27 @@ const Home = () => {
   return (
     <>
       <header className="flex-row px-1">
-        <nav>{showNavigation()}</nav>
+        <nav className="nav-container">{showNavigation()}</nav>
       </header>
 
-      <h1>Pets Available</h1>
+      <h1>Adopt your Fluffy Friend Today!!</h1>
+      <h2> Pets Available</h2>
       {loading ? (
         <p>...loading</p>
       ) : (
         <>
           {pets.map((pet) => (
+            <div class="pet-card">
             <div key={pet.id}>
               <h2>{pet.name}</h2>
+            <div class="pet-info">
               <h4>{pet.breed}</h4>
-              <h4>{pet.age}</h4>
+              <h4>{pet.name} is {pet.age} years old</h4>
               <img alt='test' src={`/images/${pet.image}`} />
               <button data-id={pet.id} onClick={handleFavorite}>Add to Favorites</button>
-              </div>
+            </div>
+            </div>
+            </div>
           ))}
           </>
       )}
