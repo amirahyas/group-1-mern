@@ -37,6 +37,7 @@ type Mutation {
     registerUser(username: String!, email: String!, password: String!): Auth
     loginUser(email: String!, password: String!): Auth
     addFavorites(pets: ID!): User
+    removeFavorites(pets: ID!): User
   }
 `;
 

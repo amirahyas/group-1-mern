@@ -44,3 +44,18 @@ export const ADD_FAVORITES = gql`
   }
 }
 `;
+
+export const REMOVE_FAVORITES = gql`
+  mutation Mutation($pets: ID!) {
+  removeFavorites(pets: $pets) {
+    username
+    favorites {
+        id
+        name
+        breed
+        age
+        image
+    }
+  }
+}
+`;
