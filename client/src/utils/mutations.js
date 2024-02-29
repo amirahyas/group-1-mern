@@ -29,3 +29,18 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_FAVORITES = gql`
+  mutation Mutation($pets: ID!) {
+  addFavorites(pets: $pets) {
+    username
+    favorites {
+        id
+        name
+        breed
+        age
+        image
+    }
+  }
+}
+`;

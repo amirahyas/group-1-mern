@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 const bcrypt = require("bcrypt");
+const Favorite = require('./Favorites');
 
 
 
@@ -25,9 +26,9 @@ const userSchema = new Schema(
         favorites: [
             {
               type: Schema.Types.ObjectId,
-              ref: 'Pets',
-            },
-          ],
+              ref: 'Pet'
+            }
+          ]
     }
 )
 
