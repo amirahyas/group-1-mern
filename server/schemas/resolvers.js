@@ -77,6 +77,16 @@ const resolvers = {
 
       throw AuthenticationError;
     },
+    removeFavorites: async (parent, { pets }, context) => {
+      if (context.user) {
+      
+        const data = await User.findByIdAndUpdate(context.user._id, { $pull: { favorites: pets } }, {new: true});
+      console.log(data);
+        return data;
+      }
+
+      throw AuthenticationError;
+    },
   },
 };
 
