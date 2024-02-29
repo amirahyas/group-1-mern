@@ -31,18 +31,16 @@ const Home = () => {
     // window.location.reload();
   }
 
- 
-
-
   function showNavigation() {
+    
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/favorites" onClick={refetch}>Favorites</Link>
+        <ul className="navbar">
+          <li className="navbar-item">
+            <Link to="/favorites" className="navbar-link" onClick={refetch}>Favorites</Link>
           </li>
-          <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+          <li className="navbar-item">
+          
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
@@ -52,10 +50,10 @@ const Home = () => {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="navbar-item">
             <Link to="/signup">Signup</Link>
           </li>
-          <li className="mx-1">
+          <li className="navbar-item">
             <Link to="/login">Login</Link>
           </li>
         </ul>
@@ -65,12 +63,14 @@ const Home = () => {
 
   return (
     <>
-      <header className="flex-row px-1">
+      { <header className="flex-row px-1">
         <nav className="nav-container">{showNavigation()}</nav>
-      </header>
+      </header> }
 
       <h1>Adopt your Fluffy Friend Today!!</h1>
+    <div className="pet-header">
       <h2> Pets Available</h2>
+    </div>
       {loading ? (
         <p>...loading</p>
       ) : (
